@@ -58,7 +58,7 @@ app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData",
                     surveyManager.getSurveyResults($scope.formData);
                 });
             } else {
-                alert("Please input the name.");
+                alert("Please fill out email, company and role");
             }
         };
 
