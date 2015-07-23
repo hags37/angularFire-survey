@@ -26,13 +26,6 @@ app.config(["$routeProvider",
         $routeProvider.when("/result", {
             templateUrl: "partials/result.html",
             controller: "resultCtrl",
-            resolve: {
-                // controller will not be loaded until $requireAuth resolves
-                "currentAuth": ["Auth", function(Auth) {
-                    // $requireAuth returns a promise so the resolve waits for it to complete
-                    return Auth.$requireAuth();
-                }]
-            }
         });
 
         $routeProvider.otherwise({redirectTo: "/survey"});

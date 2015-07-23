@@ -42,7 +42,7 @@ app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData",
          */
         $scope.addSurvey = function() {
             debugger;
-            if($scope.formData.name) {
+            if($scope.formData.email) {
                 // change button to loading state
                 var $btn = $("#addButton").button("loading");
                 
@@ -56,6 +56,7 @@ app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData",
                     $scope.successInfo = true;
                     //Calculate the survey results
                     surveyManager.getSurveyResults($scope.formData);
+                    window.location.href="/#/result";
                 });
             } else {
                 alert("Please fill out email, company and role");
@@ -107,12 +108,13 @@ app.controller("loginCtrl", ["$scope", "$location", "Auth",
 ]);
 
 // Result controller
-app.controller("resultCtrl", ["$scope", "FBURL", "$firebaseArray",
-    function($scope, FBURL, $firebaseArray) {
+app.controller("resultCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyManager",
+    function($scope, FBURL, $firebaseArray, surveyManager) {
         
         var ref = new Firebase(FBURL);
         // download the data into local object
         $scope.results = $firebaseArray(ref);
+        $scope.surveyManager = surveyManager;
         
     }
 ]);
