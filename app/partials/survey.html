@@ -5,7 +5,7 @@
         <div class="modal-content">
             
             <div class="modal-header">
-                <h2 class="modal-title">
+                <h2 class="modal-title pwc-style">
                     Contact information
                 </h2>
             </div>
@@ -32,23 +32,26 @@
                 <!-- SURVEY -->
 
                 <!-- PeopleSurvey -->
-                <h1 style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">People</h1>
+                <h1 class="pwc-style" style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">People</h1>
                 <div class="form-group" ng-repeat="data in surveyData.peopleData">
-                    <label>{{data.questionNo}}. {{data.question}}</label>
+                    <!-- {{data.questionNo}}. -->
+                    <label>{{data.question}}</label>
                     <div  ng-repeat="option in data.options"><label><input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</label></input></div>
                 </div>
                 
                 <!-- ProcessSurvey -->
-                <h1 style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">Process</h1>
+                <h1 class="pwc-style" style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">Process</h1>
                 <div class="form-group" ng-repeat="data in surveyData.processData">
-                    <label>{{data.questionNo}}. {{data.question}}</label>
+                    <!-- {{data.questionNo}}. -->
+                    <label>{{data.question}}</label>
                     <div  ng-repeat="option in data.options"><label><input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</label></input></div>
                 </div>
 
                 <!-- TechnologySurvey -->
-                <h1 style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">Technology</h1>
+                <h1 class="pwc-style" style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">Technology</h1>
                 <div class="form-group" ng-repeat="data in surveyData.technologyData">
-                    <label>{{data.questionNo}}. {{data.question}}</label>
+                    <!-- {{data.questionNo}}. -->
+                    <label>{{data.question}}</label>
                     <div  ng-repeat="option in data.options"><label><input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</label></input></div>
                 </div>
                 <!-- textarea -->

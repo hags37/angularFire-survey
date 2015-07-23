@@ -39,9 +39,9 @@ ul.rating {
 
 .pwc-style {
   font-family: Georgia!important;
-  font-weight: bold!important;
+  /*font-weight: bold!important;*/
   font-style: italic!important;
-  font-size: 32px!important;
+  /*font-size: 32px!important;*/
   line-height: 40px!important;
 }
 
@@ -83,6 +83,26 @@ ul.rating {
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.6);
   border: none;
+}
+
+
+label {
+    font-family: Georgia;
+}
+
+label.question {
+    max-width: 65%;
+    vertical-align: text-top;
+    float: none;
+}
+
+label.answer {
+    display: inline-block;
+    width: 30%;
+    display: inline-block;
+    vertical-align: text-top;
+    float: none;
+    line-height: 30px;
 }
 
 h1 {
