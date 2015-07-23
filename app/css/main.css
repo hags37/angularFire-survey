@@ -97,11 +97,10 @@ label.question {
 }
 
 div.answer {
-    display: inline-block;
     width: 30%;
     display: inline-block;
     vertical-align: text-top;
-    float: none;
+    float: right;
     line-height: 30px;
 }
 

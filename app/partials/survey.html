@@ -53,8 +53,8 @@
                 <div ng-repeat="data in surveyData.processData">
                     <div class="form-group">
                         <!-- {{data.questionNo}}. -->
-                        <label>{{data.question}}</label>
-                        <div class="answers">
+                        <label class="question">{{data.question}}</label>
+                        <div class="answer">
                             <div ng-repeat="option in data.options">
                                 <label>
                                     <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</input>
@@ -70,8 +70,8 @@
                 <div ng-repeat="data in surveyData.technologyData">
                     <div class="form-group">
                         <!-- {{data.questionNo}}. -->
-                        <label>{{data.question}}</label>
-                        <div class="answers">
+                        <label class="question">{{data.question}}</label>
+                        <div class="answer">
                             <div ng-repeat="option in data.options">
                                 <label>
                                     <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</label>
