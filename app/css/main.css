@@ -37,6 +37,14 @@ ul.rating {
     }
 }
 
+.pwc-style {
+  font-family: Georgia!important;
+  font-weight: bold!important;
+  font-style: italic!important;
+  font-size: 32px!important;
+  line-height: 40px!important;
+}
+
 :focus {
     outline: 0 !important;
 }
