@@ -70,8 +70,10 @@ ul.rating {
 h1 {
   font-family: Georgia, Arial, sans-serif;
   font-size: 32px;
-  color: #192027;
-  border-bottom: 1px solid #602320;
+  /*color: #192027;*/
+  color: #6d6e71;
+  /*border-bottom: 1px solid #602320;*/
+  border-bottom: 1px solid #EB8C00;
   line-height: 42px;
   padding-bottom: 8px;
   margin-bottom: 20px;
