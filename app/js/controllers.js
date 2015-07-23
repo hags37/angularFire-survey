@@ -4,11 +4,11 @@
  * Controllers module which defines controllers.
  * @module myApp/controllers
  */
-var app = angular.module("myApp.controllers", ["ngRoute"]);
+var app = angular.module("myApp.controllers", ["ngRoute", "myApp.services"]);
 
 // Survey controller
-app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray",
-    function($scope, FBURL, $firebaseArray) {
+app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData",
+    function($scope, FBURL, $firebaseArray, surveyData) {
         
         var ref = new Firebase(FBURL);
         // create a synchronized array
@@ -19,25 +19,14 @@ app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray",
         // hide success information/alert
         $scope.successInfo = false;
 
-        // open survey modal dialog
-        $scope.takeSurvey = function () {
-            $("#survey").modal("show");
-        };
+        //Get survey questions into scope variable
+        $scope.surveyData = surveyData;
+
         
         // store data in this object
         // and set default values
         $scope.formData = {
-            "name": "Your Name",
-            "age": "30-",
-            "colors": {
-                "red": false,
-                "blue": true,
-                "green": false
-            },
-            "lunch": true,
-            "rating": 5,
-            "comment": "Thank you.",
-            "timestamp": $scope.timestamp
+           
         };
         
         /**
@@ -52,6 +41,7 @@ app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray",
          * Add survey to Firebase database.
          */
         $scope.addSurvey = function() {
+            debugger;
             if($scope.formData.name) {
                 
                 // change button to loading state
@@ -79,8 +69,8 @@ app.controller("loginCtrl", ["$scope", "$location", "Auth",
     function($scope, $location, Auth) {
         
         // temporary email and password placeholder
-        $scope.email = "admin@mydomain.com";
-        $scope.password = "password";
+        $scope.email = "pwcedo@pwc.com";
+        $scope.password = "pwc123";
         
         /**
          * Login into app and redirect to result page

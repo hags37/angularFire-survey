@@ -5,7 +5,7 @@
  * @module myApp
  */
 var app = angular.module("myApp", [
-    "ngRoute", "myApp.config", "myApp.filters", "myApp.services",
+    "ngRoute", "myApp.config", "myApp.filters",
     "myApp.directives", "myApp.controllers"
 ]);
 
