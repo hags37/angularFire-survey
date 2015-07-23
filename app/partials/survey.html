@@ -35,8 +35,15 @@
                 <h1 class="pwc-style" style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">People</h1>
                 <div class="form-group" ng-repeat="data in surveyData.peopleData">
                     <!-- {{data.questionNo}}. -->
-                    <label>{{data.question}}</label>
-                    <div  ng-repeat="option in data.options"><label><input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</label></input></div>
+                    <label class="question">{{data.question}}</label>
+                    <div class="answer">
+                        <div  ng-repeat="option in data.options">
+                            <label>
+                                <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">
+                                {{option}}
+                            </label>
+                        </input>
+                    </div>
                 </div>
                 
                 <!-- ProcessSurvey -->
