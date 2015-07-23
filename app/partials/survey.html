@@ -33,45 +33,55 @@
 
                 <!-- PeopleSurvey -->
                 <h1 class="pwc-style" style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">People</h1>
-                <div class="form-group" ng-repeat="data in surveyData.peopleData">
-                    <!-- {{data.questionNo}}. -->
-                    <label class="question">{{data.question}}</label>
-                    <div class="answer">
-                        <div ng-repeat="option in data.options">
-                            <label>
-                                <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</input>
-                            </label>
+                <div ng-repeat="data in surveyData.peopleData">
+                    <div class="form-group">
+                        <!-- {{data.questionNo}}. -->
+                        <label class="question">{{data.question}}</label>
+                        <div class="answer">
+                            <div ng-repeat="option in data.options">
+                                <label>
+                                    <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</input>
+                                </label>
+                            </div>
                         </div>
                     </div>
+                    <span class="divider">&nbsp;</span>
                 </div>
                 
                 <!-- ProcessSurvey -->
                 <h1 class="pwc-style" style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">Process</h1>
-                <div class="form-group" ng-repeat="data in surveyData.processData">
-                    <!-- {{data.questionNo}}. -->
-                    <label>{{data.question}}</label>
-                    <div class="answers">
-                        <div ng-repeat="option in data.options">
-                            <label>
-                                <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</input>
-                            </label>
+                <div ng-repeat="data in surveyData.processData">
+                    <div class="form-group">
+                        <!-- {{data.questionNo}}. -->
+                        <label>{{data.question}}</label>
+                        <div class="answers">
+                            <div ng-repeat="option in data.options">
+                                <label>
+                                    <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</input>
+                                </label>
+                            </div>
                         </div>
                     </div>
+                    <span class="divider">&nbsp;</span>
                 </div>
 
                 <!-- TechnologySurvey -->
                 <h1 class="pwc-style" style="font-family: CharterITCRegRegular, Georgia, Helvetica, Arial, 'Lucida Grande', sans-serif;">Technology</h1>
-                <div class="form-group" ng-repeat="data in surveyData.technologyData">
-                    <!-- {{data.questionNo}}. -->
-                    <label>{{data.question}}</label>
-                    <div class="answers">
-                        <div ng-repeat="option in data.options">
-                            <label>
-                                <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</label>
-                            </input>
+                <div ng-repeat="data in surveyData.technologyData">
+                    <div class="form-group">
+                        <!-- {{data.questionNo}}. -->
+                        <label>{{data.question}}</label>
+                        <div class="answers">
+                            <div ng-repeat="option in data.options">
+                                <label>
+                                    <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</label>
+                                </input>
+                            </div>
                         </div>
                     </div>
+                    <span class="divider">&nbsp;</span>
                 </div>
+
                 <!-- textarea -->
                 <div>
                     <label>Comments</label>
