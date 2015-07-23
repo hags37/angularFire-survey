@@ -4,11 +4,11 @@
  * Controllers module which defines controllers.
  * @module myApp/controllers
  */
-var app = angular.module("myApp.controllers", ["ngRoute", "myApp.services"]);
+var app = angular.module("myApp.controllers", ["ngRoute", "myApp.services", "myApp.managers"]);
 
 // Survey controller
-app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData",
-    function($scope, FBURL, $firebaseArray, surveyData) {
+app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData", "SurveyManager",
+    function($scope, FBURL, $firebaseArray, surveyData, surveyManager) {
         
         var ref = new Firebase(FBURL);
         // create a synchronized array
@@ -43,7 +43,6 @@ app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData",
         $scope.addSurvey = function() {
             debugger;
             if($scope.formData.name) {
-                
                 // change button to loading state
                 var $btn = $("#addButton").button("loading");
                 
@@ -55,6 +54,8 @@ app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData",
                     $btn.button("reset");
                     // show success information/alert
                     $scope.successInfo = true;
+                    //Calculate the survey results
+                    surveyManager.getSurveyResults($scope.formData);
                 });
             } else {
                 alert("Please input the name.");
