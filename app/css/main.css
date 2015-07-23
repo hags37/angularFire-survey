@@ -24,3 +24,17 @@ ul.rating {
     cursor: pointer;
     font-size: 2em;
 }
+
+@media (min-width: 768px) {
+    .navbar-brand {
+        float: none !important;
+    }
+
+    .navbar-header {
+        margin: 15px 0 15px 0 !important;
+        width: 100% !important;
+        text-align: center !important;
+    }
+}
+
+
