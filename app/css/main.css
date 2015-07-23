@@ -37,4 +37,16 @@ ul.rating {
     }
 }
 
+.modal-dialog {
+    width: 100% !important;
+    margin: 0 auto 30px !important;
+}
 
+.modal-content {
+    box-shadow: none !important;
+    border: none;
+}
+
+.info-input {
+    width: 40%;
+}
