@@ -38,7 +38,7 @@
                         <!-- {{data.questionNo}}. -->
                         <label class="question">{{data.question}}</label>
                         <div class="answer">
-                            <div ng-repeat="option in data.options">
+                            <div class="alt" ng-repeat="option in data.options">
                                 <label>
                                     <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</input>
                                 </label>
@@ -55,7 +55,7 @@
                         <!-- {{data.questionNo}}. -->
                         <label class="question">{{data.question}}</label>
                         <div class="answer">
-                            <div ng-repeat="option in data.options">
+                            <div class="alt" ng-repeat="option in data.options">
                                 <label>
                                     <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</input>
                                 </label>
@@ -72,7 +72,7 @@
                         <!-- {{data.questionNo}}. -->
                         <label class="question">{{data.question}}</label>
                         <div class="answer">
-                            <div ng-repeat="option in data.options">
+                            <div class="alt" ng-repeat="option in data.options">
                                 <label>
                                     <input type="radio" ng-model="formData[$parent.data.questionNo]" value="{{option}}">{{option}}</label>
                                 </input>

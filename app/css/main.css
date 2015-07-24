@@ -97,11 +97,27 @@ label.question {
 }
 
 div.answer {
-    width: 30%;
+    width: 32%;
     display: inline-block;
     vertical-align: text-top;
     float: right;
     line-height: 30px;
+}
+
+div.answer .alt {
+    float: left;
+}
+
+div.answer .alt label {
+    position: relative;
+    top: 10px;
+    margin: 10px;
+}
+
+div.answer .alt label input[type=checkbox], input[type=radio] {
+    margin: 4px 5px 4px;
+    position: relative;
+    top: 2px;
 }
 
 .divider {
