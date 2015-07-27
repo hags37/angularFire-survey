@@ -41,7 +41,6 @@ app.controller("surveyCtrl", ["$scope", "FBURL", "$firebaseArray", "SurveyData",
          * Add survey to Firebase database.
          */
         $scope.addSurvey = function() {
-            debugger;
             if($scope.formData.email) {
                 // change button to loading state
                 var $btn = $("#addButton").button("loading");
