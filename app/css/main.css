@@ -91,13 +91,13 @@ label {
 }
 
 label.question {
-    max-width: 65%;
+    max-width: 40%;
     vertical-align: text-top;
     float: none;
 }
 
 div.answer {
-    width: 32%;
+    width: 60%;
     display: inline-block;
     vertical-align: text-top;
     float: right;
@@ -105,7 +105,7 @@ div.answer {
 }
 
 div.answer .alt {
-    float: left;
+    float: right;
 }
 
 div.answer .alt label {
