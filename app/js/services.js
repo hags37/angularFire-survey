@@ -26,22 +26,22 @@ app.factory("SurveyData", [function () {
 			{
 				"questionNo": 1,
 				"question": '"Important strategic and operational decisions are quickly translated into action"',
-				"options": ["Agree", "Disagree"]
+				"options": ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Stronly disagree"]
 			}, 
 			{
 				"questionNo": 2,
 				"question": '"We are disciplined in focusing our efforts on where we can win"',
-				"options": ["Agree", "Disagree"]
+				"options": ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Stronly disagree"]
 			},  
 			{
 				"questionNo": 3,
 				"question": '"Once made, decisions are rarely second-guessed"',
-				"options": ["Agree", "Disagree"]
+				"options": ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Stronly disagree"]
 			}, 
 			{
 				"questionNo": 4,
 				"question": '"We have a distinctive culture that gives us a competitive advantage"',
-				"options": ["Agree", "Disagree"]
+				"options": ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Stronly disagree"]
 			}, 
 			{
 				"questionNo": 5,
@@ -51,17 +51,17 @@ app.factory("SurveyData", [function () {
 			{
 				"questionNo": 6,
 				"question": '"People who innovate get rewarded here"',
-				"options": ["Agree", "Disagree"]
+				"options": ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Stronly disagree"]
 			}, 
 			{
 				"questionNo": 7,
 				"question": '"Information flows freely across organizational boundaries"',
-				"options": ["Agree", "Disagree"]
+				"options": ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Stronly disagree"]
 			}, 
 			{
 				"questionNo": 8,
 				"question": '"When big things change in our environment, we adapt successfully"',
-				"options": ["Agree", "Disagree"]
+				"options": ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Stronly disagree"]
 			},  
 			{
 				"questionNo": 9,
@@ -81,7 +81,7 @@ app.factory("SurveyData", [function () {
 			{
 				"questionNo": 12,
 				"question": '"People in our organization collaborate effectively across organizational lines"',
-				"options": ["Agree", "Disagree"]
+				"options": ["Strongly agree", "Somewhat agree", "Somewhat disagree", "Stronly disagree"]
 			}
 		],
 
